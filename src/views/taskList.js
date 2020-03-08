@@ -11,14 +11,6 @@ class TaskList extends Component {
     this.update();
   }
 
-    componentDidMount() {
-        this.listener = this.props.navigation.addListener('didFocus', console.log('qwe'));
-    }
-
-    componentWillUnmount() {
-        this.listener.remove();
-    }
-
   remove = task => {
     Storage.deleteTask(task).then(() => this.update());
   };
@@ -34,6 +26,7 @@ class TaskList extends Component {
             <TaskListItemView
               view={this.props.navigation.navigate}
               task={item}
+              refresh={this.update}
               remove={this.remove}
             />
           ))}
@@ -42,7 +35,7 @@ class TaskList extends Component {
           buttonColor="#1178c3"
           iconTextColor="#fff"
           onClickAction={() => {
-            this.props.navigation.navigate('Task');
+            this.props.navigation.navigate('Task', {refresh: this.update});
           }}
           visible={true}
           iconTextComponent={

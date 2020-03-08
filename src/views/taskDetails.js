@@ -54,6 +54,7 @@ export default class TaskDetails extends Component {
               title: this.state.title,
               content: this.state.content,
             }).then(() => {
+              this.props.route.params.refresh();
               this.props.navigation.goBack();
             });
           }}

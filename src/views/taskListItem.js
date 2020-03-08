@@ -25,7 +25,7 @@ class TaskListItemView extends Component {
       <View>
         <Text
           style={styles.taskTitle}
-          onPress={() => this.props.view('Task', this.props.task)}>
+          onPress={() => this.props.view('Task', {'title': this.props.task.title, 'content': this.props.task.content, 'refresh': this.props.refresh})}>
           {this.props.task.title}
         </Text>
         <TouchableHighlight
