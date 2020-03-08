@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   taskTitle: {
     fontSize: 30,
     marginLeft: 20,
+    marginRight: 50,
   },
 });
 
