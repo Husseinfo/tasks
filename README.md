@@ -2,6 +2,8 @@
 
 Simple To-do application in react-native
 
+![alt tasks](https://github.com/Husseinfo/tasks/blob/master/tasks.png?raw=true)
+
 # Running
 
 ## Install npm
