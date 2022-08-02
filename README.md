@@ -18,4 +18,4 @@ Simple To-do application in react-native
 
 ### Run app in Android Emulator
 
-`$ npm android`
+`$ npm run android`
