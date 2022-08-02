@@ -1,4 +1,5 @@
 # tasks
+
 Simple To-do application in react-native
 
 # Running
@@ -17,4 +18,4 @@ Simple To-do application in react-native
 
 ### Run app in Android Emulator
 
-`$ npx react-native run-android`
+`$ npm android`
