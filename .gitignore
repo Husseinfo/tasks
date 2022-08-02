@@ -58,3 +58,6 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 *.db
+
+# java pid
+*.hprof
