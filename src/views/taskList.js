@@ -25,7 +25,7 @@ class TaskList extends Component {
         <ScrollView style={{height: '95%', marginTop: 20}}>
           {this.state.tasks.map(item => (
             <TaskListItemView
-              key={Utils.hashCode(item)}
+              key={Utils.hashCode(item.title)}
               view={this.props.navigation.navigate}
               task={item}
               refresh={this.update}
