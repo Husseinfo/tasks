@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Storage from '../services/storage';
+import Utils from '../services/utils';
 import {Image, ScrollView, TextInput, View} from 'react-native';
 import TaskListItemView from './taskListItem';
 import FAB from 'react-native-fab';
@@ -24,6 +25,7 @@ class TaskList extends Component {
         <ScrollView style={{height: '95%', marginTop: 20}}>
           {this.state.tasks.map(item => (
             <TaskListItemView
+              key={Utils.hashCode(item)}
               view={this.props.navigation.navigate}
               task={item}
               refresh={this.update}
